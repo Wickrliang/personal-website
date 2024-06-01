@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaun Condon - Professional Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Shaun Condon</h1>
+        <p>Accomplished ESG General Manager with over 20 years of experience...</p>
+    </header>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <div>
+            <h3>Professional Summary</h3>
+            <p>Accomplished ESG General Manager with over 20 years of experience...</p>
+            <!-- Add more sections as needed -->
+        </div>
+    </section>
+
+    <section id="dashboard">
+        <h2>Energy and Emissions Dashboard</h2>
+        <canvas id="myChart"></canvas>
+    </section>
+
+    <script>
+        const labels = ['FY25', 'FY26', 'FY27', 'FY28', 'FY29', 'FY30', 'FY31', 'FY32', 'FY33'];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Annual Electricity Consumption (MWh)',
+                backgroundColor: 'rgb(75, 192, 192)',
+                borderColor: 'rgb(75, 192, 192)',
+                data: [1805, 1805, 1265, 1215, 1195, 1185, 1146, 1146, 1151],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+</body>
+</html>
